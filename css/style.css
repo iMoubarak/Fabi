@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(89, 54, 11, 0.678); */
+    background-image: url("../img/Giant\ library\ with\ piles\ of\ books.jpg");
+    background-position: center center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.parent
+{
+    width: 70%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0px 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+.fils1
+{
+    background-color: rgba(253, 246, 230, 0.726);
+    display: grid;
+    grid-template-rows: 20% 30% 50%;
+}
+.fils2
+{
+    background-color:rgba(80, 62, 62, 0.759);
+    
+}
+.logo
+{
+    border-left: 20px solid rgb(80, 62, 62);
+    width: 90%;
+    margin-left: 5%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.logo h1
+{
+    font-size: 30px;
+    margin-left: 10px;
+    color: rgb(80, 62, 62);
+}
+.logo h6
+{
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.titre-accueil
+{
+    width: 90%;
+    margin-left: 5%;
+    height: 60%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.titre-accueil h1
+{
+    font-size: 30px;
+    color: rgb(80, 62, 62);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.titre-accueil h5
+{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight:500;
+    color: rgba(0, 0, 0, 0.682);
+}
+.formulaire
+{
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    display: flex;
+}
+.formulaire form
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% 20% 20%;
+}
+.div_input
+{
+    display: grid;
+    flex-direction: column;
+    height: 75%;
+}
+.div_input input
+{
+
+    width: 90%;
+    outline: none;
+    border: 1px solid silver;
+    background-color: rgba(253, 246, 230, 0.726);
+    font-size: 15px;
+    text-align: start;
+    padding: 10px;
+    margin-top: 5px;
+    transition: all 0.1s ease 0.2s;
+}
+#status
+{
+    text-align: center;
+    font-size: 14px;
+}
+.div_input input:hover
+{
+    border-left: 10px solid rgb(80, 62, 62);
+
+}
+.div_input input:active
+{
+    border-left: 10px solid rgb(80, 62, 62);
+
+}
+.div_remember
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 14px;
+}
+.div_remember input[type='checkbox']
+{
+    width: 20px;
+    height: 20px;
+}
+.div_button
+{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+.div_button button
+{
+    width: 150px;
+    height: 43px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-align: center;
+    background-image: linear-gradient(60deg,rgb(80,62,62),rgba(253, 246, 230, 0.434));
+    border: none;
+    font-weight: 900;
+    margin-right: 20px;
+}
+.div_button a
+{
+    width: 150px;
+    height: 43px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-decoration: none;
+    background-color: rgba(253, 246, 230, 0.382);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
