@@ -1,5 +1,43 @@
 <?php
 session_start();
+$msg='';
+$visible='hidden';
+try {
+    if($_SERVER["REQUEST_METHOD"]=='POST')
+    {
+        require("connect.php");
+        $mat = trim(htmlspecialchars($_POST["matricule"]));
+        $pass = trim(htmlspecialchars($_POST["mot_de_passe"]));
+        $requete = "SELECT matricule,motdepasse FROM CompteAgent WHERE matricule=:MAT";
+        $st = $pdo->prepare($requete);
+        $st->bindParam(":MAT",$mat);
+        $st->execute();
+        $agent = $st->fetch();
+        if($agent)
+        {
+            if(password_verify($pass,$agent["motdepasse"]))
+            {
+                $_SESSION["matricule"] = $mat;
+                header("Location: index.php");
+                exit();
+            }
+            else
+            {
+                $msg="Mot de passe incorrect";
+                $visible="visible";
+            }
+        }
+        else
+        {
+            $msg = "Matricule incorrect";
+            $visible = "visible";
+        }
+    }
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +60,9 @@ session_start();
                 <h5>Merci de votre retour,veuillez vous connecter<br>à votre compte en remplissant ce formulaire :</h5>
             </div>
             <div class="formulaire">
-                <form id="formC">
+                <form id="formC" method="post">
                     <div class="div_input">
-                        <div id="status">status</div>
+                        <div id="status" style="visibility:<?=$visible?>;"><?=$msg?></div>
                         <input type="text" name="matricule" placeholder="Matricule" required>
                         <input type="password" name="mot_de_passe" placeholder="Mot de passe" required> 
                     </div>
@@ -41,6 +79,5 @@ session_start();
         </div>
         <div class="fils2"></div>
     </div>
-    <script src="js/log.js"></script>
 </body>
 </html>

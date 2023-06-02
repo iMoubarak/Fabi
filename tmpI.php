@@ -1,9 +1,5 @@
 <?php
 session_start();
-if(!empty($_POST["matricule"]))
-{
-    $_SESSION["test"]=1;
-}
 $msg='';
 $visible='';
 try {
