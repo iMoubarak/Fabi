@@ -45,14 +45,51 @@ if(empty($_SESSION["matricule"]))
                     </div>
                     <div class="profil">
                         <div class="image_profil"><img src="icone/man.png" alt="icone profile"></div>
-                        <div class="nom_profil"><span>Admin<br>Ali Boubacar</span></div>
+                        <div class="nom_profil"><h6>Admin</h6><span>Ali Boubacar</span></div>
                     </div>
                 </div>
             </div>
             <div class="corps">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="corps-bloc1">
+                    <div class="info_g">
+                        <div class="info_entete"><img src="icone/document.png" alt=""><strong>100</strong><span>Docs au total</span></div>
+                        <div class="info_corps">
+                          
+                                <div><button><p class="color_red"></p></button><strong>Nouveaux</strong><span>100</span></div>
+                                <div><button><p class="color_green"></p></button><strong>Disponibles</strong><span>255</span></div>
+                                <div><button><p class="color_blue"></p></button><strong>En attentes</strong><span>20</span></div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="utilisateur">
+                    <div class="util_entete"><img src="icone/document.png" alt=""><strong>100</strong><span>Etudiant connecté</span></div>
+                        <div class="util_corps">
+                          
+                                <div><button># Emprunt </button><span>100</span></div>
+                                <div><button># Remis </button><span>100</span></div>
+                                <div><button># Restant </button><span>255</span></div>
+                            
+                        </div>
+                    </div>
+                    <div class="docs_ajouter">
+                        
+                    </div>
+                </div>
+                <div class="corps-bloc2">
+                    <div class="graphe"></div>
+                    <div class="raccourci">
+                        <div class="rac_entete"><h4>Accès rapide</h4></div>
+                        <div class="rac_corps">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

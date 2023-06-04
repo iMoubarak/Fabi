@@ -28,11 +28,11 @@ body
 }
 .parent
 {
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     background-color: var(--color-secondary);
 
-    border-radius: 20px;
+    /* border-radius: 20px; */
     display: grid;
     grid-template-columns: 13% 87%;
 }
@@ -91,7 +91,7 @@ body
 .fils2
 {
     background-color: var(--color-primary);
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow:0px 0px 5px 2px rgba(0,0,0,0.3);
     display: grid;
     grid-template-rows: 10% 90%;
@@ -100,7 +100,6 @@ body
 {
     display: grid;
     grid-template-columns: 50% 50%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.051);
 
 }
 .entete1
@@ -209,14 +208,207 @@ body
 .corps
 {
     display: grid;
-    grid-template-rows: 30% 30% 30%;
-    row-gap: 25px;
+    grid-template-rows: 40% 60%;
+    
 }
-.corps div
+.corps-bloc1
 {
-
-    box-shadow: var(--box-shadow1);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     width: 90%;
     position: relative;
-    left: 5%;
+    left:8%;
+}
+.info_g,.utilisateur,.docs_ajouter
+{
+    box-shadow: var(--box-shadow1);
+    width: 80%;
+    height: 80%;
+    border-radius: 10px; 
+    display: grid;
+    grid-template-rows: 20% 80%;
+    background-color: var(--color-primary);
+}
+.info_g
+{
+    
+}
+.info_entete,.util_entete
+{
+    display: flex;
+    align-items: flex-end;
+    line-height: 5px;
+    justify-content: space-around;
+}
+.info_entete strong,.util_entete strong
+{
+    font-size: 20px;
+    position: relative;
+    right: 11%;
+}
+.info_entete img,.util_entete img
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 4%;
+}
+.info_entete span,.util_entete span
+{
+    font-size: 15px;
+    position: relative;
+    right: 25%;
+    color: rgba(0, 0, 0, 0.726);
+}
+.info_corps
+{
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-around;
+   flex-direction: column;
+}
+.info_corps div
+{
+    position: relative;
+    left: 15%;
+    width: 80%;
+    display: flex;
+    justify-content:start;
+}
+.info_corps div span
+{
+    text-align: center;
+    width: 40%;
+    color: rgba(0, 0, 0, 0.726);
+    font-size: 13px;
+}
+.info_corps div strong
+{
+    width: 50%;
+    text-align: start;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.827);
+}
+.info_corps div button
+{
+    width: 10%;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: none;
+    background: none;
+}
+.info_corps div button p
+{
+    padding: 3px 3px;
+}
+.info_corps ul{list-style:disc;}
+.color_red
+{
+    background-color: brown;
+}
+.color_blue
+{
+    background-color:skyblue;
+}
+.color_green
+{
+    background-color: darkgreen;
+}
+
+
+
+
+.util_corps 
+{
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.util_corps div
+{
+    position: relative;
+    left: 15%;
+    width: 80%;
+    display: flex;
+    justify-content:start;
+}
+.util_corps div span
+{
+    text-align: center;
+    width: 40%;
+    color: rgba(0, 0, 0, 0.726);
+    font-size: 13px;
+}
+.util_corps div strong
+{
+    width: 50%;
+    text-align: start;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.827);
+}
+.util_corps div button
+{
+    width: 80px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: none;
+    background: #f2ecec48;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.827);
+    
+}
+.corps-bloc2
+{
+    display: grid;
+    grid-template-columns: 62% 30%;
+}
+.graphe
+{
+    box-shadow: var(--box-shadow1);
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    height: 90%;
+    margin-left: 13%;
+}
+.raccourci
+{
+    box-shadow: var(--box-shadow1);
+    border-radius: 10px;
+    height: 90%;
+    width: 80%;
+    margin-left: 20%;
+    display: grid;
+    grid-template-rows: 13% 85%;
+}
+.rac_entete
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+}
+.rac_corps
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 90%;
+    position: relative;
+    top: 10%;
+}
+.rac_corps div
+{
+    background-color: var(--color-primary);
+    width: 85%;
+    height: 65%;
+    position: relative;
+    left: 8%;
+    border-radius: 10px;
 }
