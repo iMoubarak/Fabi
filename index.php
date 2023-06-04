@@ -49,7 +49,11 @@ if(empty($_SESSION["matricule"]))
                     </div>
                 </div>
             </div>
-            <div class="corps"></div>
+            <div class="corps">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
 </body>
